@@ -5,508 +5,274 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="theme-color" content="#061329">
-<meta name="description" content="MRPHONE56 - Réparation de smartphones dans le Morbihan.">
-<title>MRPHONE56 | Réparation de téléphones</title>
+<meta name="description" content="MRPHONE56 - Réparation d'iPhone dans le Morbihan. Écrans, batteries et composants.">
+<title>MRPHONE56 | Réparation iPhone</title>
 
 <style>
 :root {
-  --fond: #061329;
-  --bleu: #168bff;
-  --cyan: #4bd8ff;
-  --blanc: #f5f9ff;
-  --gris: #b6c8df;
+  --fond:#061329;
+  --bleu:#168bff;
+  --cyan:#4bd8ff;
+  --blanc:#f5f9ff;
+  --gris:#b6c8df;
 }
-
-* {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
+* {box-sizing:border-box;margin:0;padding:0}
+html {scroll-behavior:smooth}
 body {
-  font-family: Arial, sans-serif;
-  background: var(--fond);
-  color: var(--blanc);
-  line-height: 1.6;
-  overflow-x: hidden;
+  font-family:Arial,sans-serif;
+  background:var(--fond);
+  color:var(--blanc);
+  line-height:1.6;
+  overflow-x:hidden;
 }
-
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-1;
   background:
-    radial-gradient(circle at 15% 15%, #168bff30, transparent 30%),
-    radial-gradient(circle at 85% 45%, #4bd8ff20, transparent 30%);
+    radial-gradient(circle at 15% 15%,#168bff30,transparent 30%),
+    radial-gradient(circle at 85% 45%,#4bd8ff20,transparent 30%);
 }
-
-.container {
-  width: min(1100px, 90%);
-  margin: auto;
-}
+.container {width:min(1100px,90%);margin:auto}
 
 /* NAVIGATION */
-
 header {
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  background: #061329eF;
-  backdrop-filter: blur(15px);
-  border-bottom: 1px solid #168bff40;
+  position:sticky;top:0;z-index:100;
+  background:#061329ef;
+  backdrop-filter:blur(15px);
+  border-bottom:1px solid #168bff40;
 }
-
 nav {
-  min-height: 80px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
+  min-height:80px;display:flex;
+  align-items:center;justify-content:space-between;gap:20px;
 }
-
 .logo {
-  font-size: 25px;
-  font-weight: 900;
-  letter-spacing: 2px;
+  font-size:25px;font-weight:900;
+  letter-spacing:2px;color:white;text-decoration:none;
 }
-
-.logo span {
-  color: var(--cyan);
-}
-
-nav ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
-}
-
-nav a {
-  color: white;
-  text-decoration: none;
-  transition: .3s;
-}
-
-nav a:hover {
-  color: var(--cyan);
-}
-
+.logo span {color:var(--cyan)}
+nav ul {display:flex;list-style:none;gap:25px}
+nav a {color:white;text-decoration:none;transition:.3s}
+nav a:hover {color:var(--cyan)}
 .menu-btn {
-  display: none;
-  background: none;
-  color: white;
-  border: 1px solid #168bff;
-  padding: 8px 12px;
-  border-radius: 8px;
-  font-size: 20px;
+  display:none;background:none;color:white;
+  border:1px solid #168bff;padding:8px 12px;
+  border-radius:8px;font-size:20px;
 }
 
 /* ACCUEIL */
-
 .hero {
-  min-height: 650px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 40px;
-  padding: 70px 0;
+  min-height:650px;display:flex;
+  align-items:center;justify-content:space-between;
+  gap:40px;padding:70px 0;
 }
-
-.hero-content {
-  max-width: 600px;
-  animation: apparition 1s ease;
-}
-
+.hero-content {max-width:600px;animation:apparition 1s ease}
 .tag {
-  display: inline-block;
-  padding: 9px 15px;
-  background: #168bff20;
-  border: 1px solid #4bd8ff60;
-  border-radius: 30px;
-  color: var(--cyan);
-  font-size: 13px;
-  margin-bottom: 20px;
+  display:inline-block;padding:9px 15px;
+  background:#168bff20;border:1px solid #4bd8ff60;
+  border-radius:30px;color:var(--cyan);
+  font-size:13px;margin-bottom:20px;
 }
-
-h1 {
-  font-size: clamp(40px, 6vw, 75px);
-  line-height: 1.1;
-  margin-bottom: 25px;
-}
-
+h1 {font-size:clamp(40px,6vw,75px);line-height:1.1;margin-bottom:25px}
 .gradient {
-  background: linear-gradient(90deg, white, #4bd8ff, #168bff);
-  -webkit-background-clip: text;
-  color: transparent;
+  background:linear-gradient(90deg,white,#4bd8ff,#168bff);
+  -webkit-background-clip:text;color:transparent;
 }
-
-.hero p {
-  color: var(--gris);
-  font-size: 18px;
-}
-
-.buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 15px;
-  margin-top: 30px;
-}
-
+.hero p {color:var(--gris);font-size:18px}
+.buttons {display:flex;flex-wrap:wrap;gap:15px;margin-top:30px}
 .btn {
-  display: inline-block;
-  padding: 14px 22px;
-  border-radius: 12px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: .3s;
+  display:inline-block;padding:14px 22px;
+  border-radius:12px;text-decoration:none;
+  font-weight:bold;transition:.3s;
 }
-
 .btn-primary {
-  background: linear-gradient(100deg, #0878f9, #24b9ed);
-  color: white;
-  box-shadow: 0 10px 30px #168bff40;
+  background:linear-gradient(100deg,#0878f9,#24b9ed);
+  color:white;box-shadow:0 10px 30px #168bff40;
 }
-
-.btn-secondary {
-  border: 1px solid #4bd8ff60;
-  color: white;
-}
-
+.btn-secondary {border:1px solid #4bd8ff60;color:white}
 .btn:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 35px #168bff60;
+  transform:translateY(-5px);
+  box-shadow:0 12px 35px #168bff60;
 }
 
-/* LOGO VISUEL */
-
+/* TÉLÉPHONE ANIMÉ */
 .phone {
-  width: 230px;
-  height: 400px;
-  border: 4px solid var(--cyan);
-  border-radius: 35px;
-  background: linear-gradient(145deg, #153e70, #07162d);
-  box-shadow: 0 0 60px #168bff70;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transform: rotate(-8deg);
-  animation: flottement 4s infinite ease-in-out;
-  position: relative;
+  width:230px;height:400px;
+  border:4px solid var(--cyan);border-radius:35px;
+  background:linear-gradient(145deg,#153e70,#07162d);
+  box-shadow:0 0 60px #168bff70;
+  display:flex;align-items:center;justify-content:center;
+  transform:rotate(-8deg);
+  animation:flottement 4s infinite ease-in-out;
+  position:relative;flex-shrink:0;
 }
-
 .phone::before {
-  content: "";
-  position: absolute;
-  top: 10px;
-  width: 75px;
-  height: 15px;
-  background: #020a17;
-  border-radius: 20px;
+  content:"";position:absolute;top:10px;
+  width:75px;height:15px;background:#020a17;border-radius:20px;
 }
-
-.phone-logo {
-  font-size: 30px;
-  font-weight: 900;
-  text-align: center;
-  color: white;
-}
-
-.phone-logo span {
-  color: var(--cyan);
-}
+.phone-logo {font-size:30px;font-weight:900;text-align:center;color:white}
+.phone-logo span {color:var(--cyan)}
 
 /* SECTIONS */
-
-section {
-  padding: 85px 0;
-}
-
-.section-title {
-  text-align: center;
-  margin-bottom: 45px;
-}
-
-.section-title h2 {
-  font-size: clamp(30px, 4vw, 45px);
-  margin: 10px 0;
-}
-
-.section-title p {
-  color: var(--gris);
-}
-
+section {padding:85px 0}
+.section-title {text-align:center;margin-bottom:45px}
+.section-title h2 {font-size:clamp(30px,4vw,45px);margin:10px 0}
+.section-title p {color:var(--gris)}
 .kicker {
-  color: var(--cyan);
-  font-size: 13px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  text-transform: uppercase;
+  color:var(--cyan);font-size:13px;font-weight:bold;
+  letter-spacing:3px;text-transform:uppercase;
 }
 
 /* CARTES */
-
 .cards {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+  display:grid;grid-template-columns:repeat(3,1fr);gap:20px;
 }
-
 .card {
-  padding: 28px;
-  border: 1px solid #168bff40;
-  border-radius: 20px;
-  background: linear-gradient(145deg, #14345c, #081a35);
-  transition: .3s;
+  padding:28px;border:1px solid #168bff40;
+  border-radius:20px;
+  background:linear-gradient(145deg,#14345c,#081a35);
+  transition:.3s;
 }
-
 .card:hover {
-  transform: translateY(-8px);
-  border-color: var(--cyan);
-  box-shadow: 0 15px 35px #0005;
+  transform:translateY(-8px);border-color:var(--cyan);
+  box-shadow:0 15px 35px #0005;
 }
-
-.card .icon {
-  font-size: 35px;
-  margin-bottom: 15px;
-}
-
-.card h3 {
-  margin-bottom: 10px;
-}
-
-.card p {
-  color: var(--gris);
-}
+.card .icon {font-size:35px;margin-bottom:15px}
+.card h3 {margin-bottom:10px}
+.card p {color:var(--gris)}
 
 /* TARIFS */
-
 .pricing {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  max-width: 850px;
-  margin: auto;
+  display:grid;grid-template-columns:repeat(2,1fr);
+  gap:20px;max-width:850px;margin:auto;
 }
-
 .price-card {
-  padding: 35px;
-  border: 1px solid #4bd8ff60;
-  border-radius: 22px;
-  background: linear-gradient(145deg, #14345c, #081a35);
-  transition: .3s;
+  padding:35px;border:1px solid #4bd8ff60;
+  border-radius:22px;
+  background:linear-gradient(145deg,#14345c,#081a35);
+  transition:.3s;
 }
-
-.price-card:hover {
-  transform: translateY(-5px);
-}
-
+.price-card:hover {transform:translateY(-5px)}
 .price {
-  font-size: 55px;
-  font-weight: 900;
-  color: var(--cyan);
-  margin: 10px 0;
+  font-size:55px;font-weight:900;
+  color:var(--cyan);margin:10px 0;
 }
-
-.price-card p {
-  color: var(--gris);
-}
+.price-card p {color:var(--gris)}
 
 /* FONCTIONNEMENT */
-
-.steps {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-
+.steps {display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .step {
-  padding: 25px;
-  border: 1px solid #168bff40;
-  border-radius: 18px;
-  background: #10294b;
+  padding:25px;border:1px solid #168bff40;
+  border-radius:18px;background:#10294b;
 }
-
-.step-number {
-  font-size: 35px;
-  font-weight: bold;
-  color: var(--cyan);
-}
-
-.step p {
-  color: var(--gris);
-}
-
+.step-number {font-size:35px;font-weight:bold;color:var(--cyan)}
+.step p {color:var(--gris)}
 .notice {
-  max-width: 850px;
-  margin: 30px auto 0;
-  padding: 22px;
-  border: 1px solid #4bd8ff60;
-  background: #168bff15;
-  border-radius: 15px;
+  max-width:850px;margin:30px auto 0;padding:22px;
+  border:1px solid #4bd8ff60;background:#168bff15;
+  border-radius:15px;
 }
 
 /* MORBIHAN */
-
 .area {
-  text-align: center;
-  padding: 45px;
-  border: 1px solid #4bd8ff50;
-  border-radius: 25px;
-  background: radial-gradient(circle, #168bff35, #07162d);
+  text-align:center;padding:45px;
+  border:1px solid #4bd8ff50;border-radius:25px;
+  background:radial-gradient(circle,#168bff35,#07162d);
 }
-
-.area strong {
-  display: block;
-  font-size: 100px;
-  color: var(--cyan);
-}
+.area strong {display:block;font-size:100px;color:var(--cyan)}
 
 /* CONTACT */
-
 .contact-box {
-  text-align: center;
-  padding: 45px 25px;
-  border: 1px solid #4bd8ff50;
-  border-radius: 25px;
-  background: linear-gradient(145deg, #14345c, #081a35);
+  text-align:center;padding:45px 25px;
+  border:1px solid #4bd8ff50;border-radius:25px;
+  background:linear-gradient(145deg,#14345c,#081a35);
 }
-
 .email {
-  display: block;
-  margin: 20px 0;
-  font-size: clamp(17px, 3vw, 24px);
-  color: var(--cyan);
-  font-weight: bold;
-  overflow-wrap: anywhere;
-  text-decoration: none;
+  display:block;margin:20px 0;
+  font-size:clamp(17px,3vw,24px);
+  color:var(--cyan);font-weight:bold;
+  overflow-wrap:anywhere;text-decoration:none;
 }
+.social-title {margin:30px 0 15px;color:var(--gris)}
+.social-buttons {
+  display:flex;justify-content:center;
+  flex-wrap:wrap;gap:15px;margin-top:20px;
+}
+.social-btn {
+  display:inline-flex;align-items:center;
+  justify-content:center;gap:9px;
+  padding:15px 23px;border-radius:12px;
+  text-decoration:none;font-weight:bold;
+  transition:.3s;min-width:190px;
+}
+.social-btn:hover {
+  transform:translateY(-6px);
+  box-shadow:0 12px 30px #168bff70;
+}
+.tiktok {
+  background:#080808;color:white;
+  border:1px solid #25f4ee;
+  box-shadow:4px 4px 0 #fe2c55;
+}
+.snapchat {background:#ffeb00;color:#111}
+.social-icon {font-size:23px}
 
 /* FOOTER */
-
 footer {
-  border-top: 1px solid #168bff40;
-  padding: 25px;
-  text-align: center;
-  color: var(--gris);
+  border-top:1px solid #168bff40;
+  padding:25px;text-align:center;color:var(--gris);
 }
+footer a {color:var(--cyan);text-decoration:none}
 
 /* ANIMATIONS */
-
 @keyframes flottement {
-  0%, 100% {
-    transform: rotate(-8deg) translateY(0);
-  }
-  50% {
-    transform: rotate(-8deg) translateY(-15px);
-  }
+  0%,100% {transform:rotate(-8deg) translateY(0)}
+  50% {transform:rotate(-8deg) translateY(-15px)}
 }
-
 @keyframes apparition {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from {opacity:0;transform:translateY(30px)}
+  to {opacity:1;transform:translateY(0)}
 }
-
 .reveal {
-  opacity: 0;
-  transform: translateY(25px);
-  transition: .8s ease;
+  opacity:0;transform:translateY(25px);transition:.8s ease;
 }
-
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal.visible {opacity:1;transform:translateY(0)}
 
 /* MOBILE */
-
-@media(max-width: 800px) {
-  .hero {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .buttons {
-    justify-content: center;
-  }
-
-  .cards {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .steps {
-    grid-template-columns: 1fr;
-  }
-
+@media(max-width:800px) {
+  .hero {flex-direction:column;text-align:center}
+  .buttons {justify-content:center}
+  .cards {grid-template-columns:repeat(2,1fr)}
+  .steps {grid-template-columns:1fr}
   nav ul {
-    display: none;
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background: #061329;
-    padding: 25px;
-    flex-direction: column;
+    display:none;position:absolute;top:80px;
+    left:0;right:0;background:#061329;
+    padding:25px;flex-direction:column;
   }
-
-  nav ul.open {
-    display: flex;
-  }
-
-  .menu-btn {
-    display: block;
-  }
+  nav ul.open {display:flex}
+  .menu-btn {display:block}
 }
-
-@media(max-width: 550px) {
-  .cards,
-  .pricing {
-    grid-template-columns: 1fr;
-  }
-
-  .phone {
-    width: 190px;
-    height: 330px;
-  }
-
-  section {
-    padding: 60px 0;
-  }
+@media(max-width:550px) {
+  .cards,.pricing {grid-template-columns:1fr}
+  .phone {width:190px;height:330px}
+  section {padding:60px 0}
 }
-
-@media(prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    animation: none !important;
-    transition: none !important;
-    scroll-behavior: auto !important;
+@media(prefers-reduced-motion:reduce) {
+  *,*::before,*::after {
+    animation:none!important;transition:none!important;
+    scroll-behavior:auto!important;
   }
-
-  .reveal {
-    opacity: 1;
-    transform: none;
-  }
+  .reveal {opacity:1;transform:none}
 }
 </style>
 </head>
 
 <body>
-
 <header>
   <div class="container">
     <nav>
-      <a href="#accueil" class="logo">
-        MR<span>PHONE56</span>
-      </a>
-
+      <a href="#accueil" class="logo">MR<span>PHONE56</span></a>
       <ul id="navlinks">
         <li><a href="#accueil">Accueil</a></li>
         <li><a href="#reparations">Réparations</a></li>
@@ -514,7 +280,6 @@ footer {
         <li><a href="#fonctionnement">Paiement</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
-
       <button class="menu-btn" id="menuBtn" aria-label="Ouvrir le menu">☰</button>
     </nav>
   </div>
@@ -522,336 +287,225 @@ footer {
 
 <main>
 
-<!-- ACCUEIL -->
-
 <section class="container hero" id="accueil">
-
   <div class="hero-content">
-    <div class="tag">✦ RÉPARATION SMARTPHONE · MORBIHAN 56</div>
-
-    <h1>
-      Votre téléphone<br>
-      <span class="gradient">entre de bonnes mains.</span>
-    </h1>
-
+    <div class="tag">✦ RÉPARATION IPHONE · MORBIHAN 56</div>
+    <h1>Votre iPhone<br><span class="gradient">entre de bonnes mains.</span></h1>
     <p>
-      Bienvenue chez MRPHONE56 !
-      Je propose des réparations de smartphones :
-      écrans, batteries et autres composants.
+      Bienvenue chez MRPHONE56 ! Je propose des réparations
+      d'iPhone : écrans, batteries et autres composants.
       Un service de proximité dans le Morbihan.
     </p>
-
     <div class="buttons">
-      <a href="#contact" class="btn btn-primary">
-        Demander une réparation →
-      </a>
-
-      <a href="#tarifs" class="btn btn-secondary">
-        Voir les tarifs
-      </a>
+      <a href="#contact" class="btn btn-primary">Demander une réparation →</a>
+      <a href="#tarifs" class="btn btn-secondary">Voir les tarifs</a>
     </div>
   </div>
-
   <div class="phone">
-    <div class="phone-logo">
-      MR<br><span>PHONE56</span>
-    </div>
+    <div class="phone-logo">MR<br><span>PHONE56</span></div>
   </div>
-
 </section>
-
-<!-- REPARATIONS -->
 
 <section id="reparations">
   <div class="container">
-
     <div class="section-title">
       <div class="kicker">Nos prestations</div>
-      <h2>Une panne ? <span class="gradient">On s'en occupe.</span></h2>
-      <p>Des réparations adaptées à votre téléphone.</p>
+      <h2>Un problème ? <span class="gradient">On s'en occupe.</span></h2>
+      <p>Des réparations adaptées à votre iPhone.</p>
     </div>
-
     <div class="cards">
-
       <div class="card reveal">
         <div class="icon">📱</div>
         <h3>Remplacement d'écran</h3>
-        <p>
-          Écran cassé, fissuré, tactile défectueux
-          ou problème d'affichage.
-        </p>
+        <p>Écran cassé, fissuré, tactile défectueux ou problème d'affichage.</p>
       </div>
-
       <div class="card reveal">
         <div class="icon">🔋</div>
         <h3>Remplacement de batterie</h3>
-        <p>
-          Batterie qui se décharge rapidement,
-          mauvaise autonomie ou batterie usée.
-        </p>
+        <p>Batterie qui se décharge rapidement, mauvaise autonomie ou batterie usée.</p>
       </div>
-
       <div class="card reveal">
         <div class="icon">🔧</div>
-        <h3>Autres composants</h3>
-        <p>
-          Connecteurs de charge, caméras,
-          haut-parleurs et autres pièces.
-        </p>
+        <h3>Connecteur de charge</h3>
+        <p>Problèmes de charge ou de connexion avec votre câble.</p>
       </div>
-
+      <div class="card reveal">
+        <div class="icon">📷</div>
+        <h3>Caméra et composants</h3>
+        <p>Interventions sur les caméras, haut-parleurs et autres composants.</p>
+      </div>
       <div class="card reveal">
         <div class="icon">⚙️</div>
         <h3>Carte mère</h3>
-        <p>
-          Réparations électroniques complexes
-          selon la panne et la faisabilité.
-        </p>
+        <p>Réparations électroniques complexes selon la panne et la faisabilité.</p>
       </div>
-
       <div class="card reveal">
         <div class="icon">🔍</div>
         <h3>Diagnostic</h3>
-        <p>
-          Identification du problème avant
-          de déterminer les pièces nécessaires.
-        </p>
+        <p>Identification du problème avant de déterminer les pièces nécessaires.</p>
       </div>
-
-      <div class="card reveal">
-        <div class="icon">✨</div>
-        <h3>Plusieurs marques</h3>
-        <p>
-          iPhone et autres smartphones,
-          selon la disponibilité des pièces.
-        </p>
-      </div>
-
     </div>
   </div>
 </section>
 
-<!-- TARIFS -->
-
 <section id="tarifs">
   <div class="container">
-
     <div class="section-title">
       <div class="kicker">Tarifs</div>
       <h2>Des prix <span class="gradient">transparents.</span></h2>
       <p>Les prix indiqués concernent uniquement la main-d'œuvre.</p>
     </div>
-
     <div class="pricing">
-
       <div class="price-card reveal">
         <div class="kicker">Écran et batterie</div>
         <div class="price">30€</div>
-        <p>
-          Frais de main-d'œuvre pour
-          un remplacement d'écran ou de batterie.
-        </p>
+        <p>Frais de main-d'œuvre pour un remplacement d'écran ou de batterie.</p>
       </div>
-
       <div class="price-card reveal">
         <div class="kicker">Réparation complexe</div>
         <div class="price">40€</div>
-        <p>
-          Frais de main-d'œuvre pour les réparations
-          complexes, comme une intervention sur carte mère.
-        </p>
+        <p>Frais de main-d'œuvre pour les réparations complexes, comme une intervention sur carte mère.</p>
       </div>
-
     </div>
-
     <div class="notice">
       <strong>Important :</strong><br>
       Le prix de la pièce détachée est en supplément.
       Il est communiqué au client avant commande.
-      Les tarifs de main-d'œuvre sont confirmés
-      selon le modèle et la panne.
+      Les tarifs de main-d'œuvre sont confirmés selon le modèle et la panne.
     </div>
-
   </div>
 </section>
 
-<!-- FONCTIONNEMENT -->
-
 <section id="fonctionnement">
   <div class="container">
-
     <div class="section-title">
       <div class="kicker">Fonctionnement</div>
       <h2>Comment ça <span class="gradient">marche ?</span></h2>
       <p>Un fonctionnement simple et transparent.</p>
     </div>
-
     <div class="steps">
-
       <div class="step reveal">
         <div class="step-number">01</div>
         <h3>Prise de contact</h3>
-        <p>
-          Le client me contacte et me communique
-          le modèle de son téléphone ainsi que
-          la panne rencontrée.
-        </p>
+        <p>Le client me communique le modèle de son iPhone ainsi que la panne rencontrée.</p>
       </div>
-
       <div class="step reveal">
         <div class="step-number">02</div>
         <h3>Paiement de la pièce</h3>
-        <p>
-          Je choisis et fournis la pièce détachée.
-          Le client règle son prix par virement
-          bancaire avant la commande.
-        </p>
+        <p>Je choisis et fournis la pièce détachée. Le client règle son prix par virement bancaire avant la commande.</p>
       </div>
-
       <div class="step reveal">
         <div class="step-number">03</div>
-        <h3>Réparation du téléphone</h3>
-        <p>
-          Une fois le téléphone réparé et remis
-          au client, celui-ci règle les frais
-          de main-d'œuvre en espèces.
-        </p>
+        <h3>Réparation de l'iPhone</h3>
+        <p>Une fois l'iPhone réparé et remis au client, celui-ci règle les frais de main-d'œuvre en espèces.</p>
       </div>
-
     </div>
-
     <div class="notice">
-      <strong>Récapitulatif des paiements :</strong>
-      <br><br>
-      ✔ Pièce détachée : paiement par virement bancaire avant commande.
-      <br>
-      ✔ Main-d'œuvre : paiement en espèces après réparation,
-      lors de la restitution du téléphone.
-      <br><br>
-      <strong>30€</strong> pour écran et batterie.
-      <br>
+      <strong>Récapitulatif des paiements :</strong><br><br>
+      ✔ Pièce détachée : paiement par virement bancaire avant commande.<br>
+      ✔ Main-d'œuvre : paiement en espèces après réparation, lors de la restitution de l'iPhone.<br><br>
+      <strong>30€</strong> pour écran et batterie.<br>
       <strong>40€</strong> pour les réparations complexes.
     </div>
-
   </div>
 </section>
 
-<!-- ZONE -->
-
 <section id="zone">
   <div class="container">
-
     <div class="section-title">
       <div class="kicker">Zone d'intervention</div>
       <h2>MRPHONE56 dans le <span class="gradient">56 !</span></h2>
-      <p>
-        Un service de réparation de proximité
-        dans le département du Morbihan.
-      </p>
+      <p>Un service de réparation de proximité dans le département du Morbihan.</p>
     </div>
-
     <div class="area">
       <strong>56</strong>
       <h3>MORBIHAN · BRETAGNE</h3>
       <p>
-        J'interviens principalement autour de ma
-        localisation dans le Morbihan.
-        Contactez-moi avec votre commune pour
-        vérifier les possibilités de prise en charge.
+        J'interviens principalement autour de ma localisation
+        dans le Morbihan. Contactez-moi avec votre commune
+        pour vérifier les possibilités de prise en charge.
       </p>
     </div>
-
   </div>
 </section>
 
-<!-- CONTACT -->
-
 <section id="contact">
   <div class="container">
-
     <div class="contact-box reveal">
-
       <div class="kicker">Contact</div>
-
-      <h2>
-        Besoin d'une <span class="gradient">réparation ?</span>
-      </h2>
-
+      <h2>Besoin d'une <span class="gradient">réparation ?</span></h2>
       <p>
-        Envoyez-moi un message avec le modèle
-        de votre téléphone, votre commune et
-        une description de votre problème.
+        Envoyez-moi un message avec le modèle de votre iPhone,
+        votre commune et une description de votre problème.
       </p>
 
-      <a class="email"
-         href="mailto:im1o.contact02@gmail.com">
-        im1o.contact02@gmail.com
+      <a class="email" href="mailto:mrphone56.contact@gmail.com">
+        mrphone56.contact@gmail.com
       </a>
 
       <a class="btn btn-primary"
-         href="mailto:im1o.contact02@gmail.com?subject=Demande%20de%20r%C3%A9paration%20MRPHONE56">
+         href="mailto:mrphone56.contact@gmail.com?subject=Demande%20de%20r%C3%A9paration%20MRPHONE56">
         ✉ Envoyer un e-mail
       </a>
 
+      <h3 class="social-title">Retrouvez MRPHONE56 sur les réseaux sociaux</h3>
+
+      <div class="social-buttons">
+        <a class="social-btn tiktok"
+           href="https://www.tiktok.com/@mrphone.56"
+           target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">♪</span>
+          Suivre sur TikTok
+        </a>
+
+        <a class="social-btn snapchat"
+           href="https://www.snapchat.com/add/mrphone56"
+           target="_blank" rel="noopener noreferrer">
+          <span class="social-icon">👻</span>
+          Ajouter sur Snapchat
+        </a>
+      </div>
     </div>
   </div>
 </section>
 
 </main>
 
-<!-- FOOTER -->
-
 <footer>
-  <p>
-    © <span id="year"></span> MRPHONE56 -
-    Réparation de smartphones dans le Morbihan (56).
-  </p>
-  <p>Contact : im1o.contact02@gmail.com</p>
+  <p>© <span id="year"></span> MRPHONE56 - Réparation d'iPhone dans le Morbihan (56).</p>
+  <p>Contact : <a href="mailto:mrphone56.contact@gmail.com">mrphone56.contact@gmail.com</a></p>
 </footer>
 
 <script>
-
 // Menu mobile
-
 const menuBtn = document.getElementById("menuBtn");
 const navlinks = document.getElementById("navlinks");
 
 menuBtn.addEventListener("click", () => {
-  navlinks.classList.toggle("open");
+  const open = navlinks.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", open);
 });
 
 navlinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
-    navlinks.classList.remove("open");
-  });
+  link.addEventListener("click", () => navlinks.classList.remove("open"));
 });
 
 // Année automatique
-
-document.getElementById("year").textContent =
-  new Date().getFullYear();
+document.getElementById("year").textContent = new Date().getFullYear();
 
 // Animations au défilement
-
 const observer = new IntersectionObserver(entries => {
-
   entries.forEach(entry => {
-
     if (entry.isIntersecting) {
       entry.target.classList.add("visible");
       observer.unobserve(entry.target);
     }
-
   });
+}, {threshold:0.12});
 
-}, { threshold: 0.12 });
-
-document.querySelectorAll(".reveal").forEach(element => {
-  observer.observe(element);
-});
-
+document.querySelectorAll(".reveal").forEach(element => observer.observe(element));
 </script>
-
 </body>
 </html>
+
 
